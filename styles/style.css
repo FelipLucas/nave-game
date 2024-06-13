@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*game*/
+.nave-game{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/espaco.gif");
+    overflow: hidden;
+}
+
+/*nave jogador*/
+.nave{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100px;
+    height: 100px;
+    background: url("../images/jogador.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*nave inimiga*/
+.nave-inimiga{
+    display: none;
+    position: absolute;
+    top: -00px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100px;
+    height: 100px;
+    animation: nave-nimiga 25s ease;
+}
+
+/*vida*/
+.life{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.life img{
+    width: 50px;
+}
+
+.life p{
+    font-family: "Silkscreen", sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+/*timer*/
+.time{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+.time p{
+    font-family: "Silkscreen", sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+/*start game*/
+.start{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.start button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    padding: 20px;
+    font-family: "Silkscreen", sans-serif;
+    font-size: 50px;
+    color: #ffffff;
+    background: transparent;
+    border: none;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.start button:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/*animações*/
+@keyframes nave-nimiga {
+    100% {
+        top: 100%;
+    }
+}
