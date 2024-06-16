@@ -119,10 +119,12 @@ const atirar = () =>{
 const moveTiros = () =>{
     const tiros = document.querySelectorAll('.tiro');
     for(let i = 0; i < tiros.length; i++){
-        if(tiros[1]){
+        if(tiros[i]){
             let positionTopTiro = tiros[i].offsetTop;
             positionTopTiro -= velocidadeTiro;
             tiros[i].style.top = positionTopTiro + 'px';
+        } else if(positionTopTiro < -10){
+            tiros[i].remove();
         }
     }
 }
